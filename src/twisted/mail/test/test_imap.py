@@ -860,8 +860,8 @@ class IMAP4HelperTests(TestCase):
             b'"oo \t oo"',
             b"oo \\t oo",
             b'"oo \\t oo"',
-            br"oo \o oo",
-            br'"oo \o oo"',
+            rb"oo \o oo",
+            rb'"oo \o oo"',
             b"oo \\o oo",
             b'"oo \\o oo"',
         ]
@@ -882,8 +882,8 @@ class IMAP4HelperTests(TestCase):
             [b"oo \t oo"],
             [b"oo", b"\\t", b"oo"],
             [b"oo \\t oo"],
-            [b"oo", br"\o", b"oo"],
-            [br"oo \o oo"],
+            [b"oo", rb"\o", b"oo"],
+            [rb"oo \o oo"],
             [b"oo", b"\\o", b"oo"],
             [b"oo \\o oo"],
         ]
@@ -960,7 +960,7 @@ class IMAP4HelperTests(TestCase):
             b"BODY (TEXT PLAIN (CHARSET US-ASCII) NIL NIL 7BIT 3028 92))",
             [
                 b"FLAGS",
-                [br"\Seen"],
+                [rb"\Seen"],
                 b"INTERNALDATE",
                 b"17-Jul-1996 02:44:25 -0700",
                 b"RFC822.SIZE",
@@ -1000,8 +1000,8 @@ class IMAP4HelperTests(TestCase):
         check(b'("oo \\ oo")', [b"oo \\ oo"])
 
         check(b'("oo \\o")', [b"oo \\o"])
-        check(br'("oo \o")', [br"oo \o"])
-        check(br"(oo \o)", [b"oo", br"\o"])
+        check(rb'("oo \o")', [rb"oo \o"])
+        check(rb"(oo \o)", [b"oo", rb"\o"])
         check(b"(oo \\o)", [b"oo", b"\\o"])
 
     def test_fetchParserSimple(self):

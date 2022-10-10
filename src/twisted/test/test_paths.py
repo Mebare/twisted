@@ -1921,6 +1921,6 @@ class UnicodeFilePathTests(TestCase):
         C{asTextMode} with an C{encoding} argument that can't be used to encode
         the unicode path raises a L{UnicodeError}.
         """
-        fp = filepath.FilePath(br"\u2603")
+        fp = filepath.FilePath(rb"\u2603")
         with self.assertRaises(UnicodeError):
             fp.asTextMode(encoding="utf-32")

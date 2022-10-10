@@ -85,7 +85,7 @@ class DummyMessage:
 
     def lineReceived(self, line):
         # Throw away the generated Received: header
-        if not re.match(br"Received: From yyy.com \(\[.*\]\) by localhost;", line):
+        if not re.match(rb"Received: From yyy.com \(\[.*\]\) by localhost;", line):
             self.buffer.append(line)
 
     def eomReceived(self):

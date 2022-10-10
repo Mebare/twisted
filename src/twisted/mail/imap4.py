@@ -5567,7 +5567,7 @@ def iterateInReactor(i):
 
 
 class MessageProducer:
-    CHUNK_SIZE = 2 ** 2 ** 2 ** 2
+    CHUNK_SIZE = 2**2**2**2
     _uuid4 = staticmethod(uuid.uuid4)
 
     def __init__(self, msg, buffer=None, scheduler=None):
@@ -5892,7 +5892,7 @@ class _FetchParser:
         self.state.extend(("section", "part_number"))
         return 1
 
-    _partExpr = re.compile(br"(\d+(?:\.\d+)*)\.?")
+    _partExpr = re.compile(rb"(\d+(?:\.\d+)*)\.?")
 
     def state_part_number(self, s):
         m = self._partExpr.match(s)
@@ -5978,7 +5978,7 @@ class _FetchParser:
 
 
 class FileProducer:
-    CHUNK_SIZE = 2 ** 2 ** 2 ** 2
+    CHUNK_SIZE = 2**2**2**2
 
     firstWrite = True
 

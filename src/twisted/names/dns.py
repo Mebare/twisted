@@ -3108,7 +3108,7 @@ class DNSMixin:
 
     def __init__(self, controller, reactor=None):
         self.controller = controller
-        self.id = random.randrange(2 ** 10, 2 ** 15)
+        self.id = random.randrange(2**10, 2**15)
         if reactor is None:
             from twisted.internet import reactor
         self._reactor = reactor

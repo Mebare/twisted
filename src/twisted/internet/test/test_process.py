@@ -875,7 +875,7 @@ class ProcessTestsBuilder(ProcessTestsBuilderBase):
         """
         us = b"twisted.internet.test.process_cli"
 
-        args = [b"hello", b'"', b" \t|<>^&", br'"\\"hello\\"', br'"foo\ bar baz\""']
+        args = [b"hello", b'"', b" \t|<>^&", rb'"\\"hello\\"', rb'"foo\ bar baz\""']
         # Ensure that all non-NUL characters can be passed too.
         allChars = "".join(map(chr, range(1, 255)))
         if isinstance(allChars, str):

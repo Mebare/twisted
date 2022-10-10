@@ -67,7 +67,7 @@ class SerialNumber(FancyStrMixin):
         @type serialBits: L{int}
         """
         self._serialBits = serialBits
-        self._modulo = 2 ** serialBits
+        self._modulo = 2**serialBits
         self._halfRing = 2 ** (serialBits - 1)
         self._maxAdd = 2 ** (serialBits - 1) - 1
         self._number = int(number) % self._modulo

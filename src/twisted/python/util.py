@@ -678,7 +678,6 @@ if _initgroups is None:
         Underlying platform support require to manipulate groups is missing.
         """
 
-
 else:
 
     def initgroups(uid, primaryGid):

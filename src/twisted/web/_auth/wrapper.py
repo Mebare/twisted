@@ -52,7 +52,7 @@ class UnauthorizedResource:
             return b" ".join([scheme, b", ".join(lst)])
 
         def quoteString(s):
-            return b'"' + s.replace(b"\\", br"\\").replace(b'"', br"\"") + b'"'
+            return b'"' + s.replace(b"\\", rb"\\").replace(b'"', rb"\"") + b'"'
 
         request.setResponseCode(401)
         for fact in self._credentialFactories:

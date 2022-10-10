@@ -1073,7 +1073,7 @@ class BinaryProtocolTests(TestCase):
         An L{amp.BinaryBoxProtocol} can receive serialized AMP boxes with
         values of up to (2 ** 16 - 1) bytes.
         """
-        length = 2 ** 16 - 1
+        length = 2**16 - 1
         value = b"x" * length
         transport = StringTransport()
         protocol = amp.BinaryBoxProtocol(self)

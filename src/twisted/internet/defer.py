@@ -70,7 +70,6 @@ except ImportError:
     def _copy_context() -> Type[_NoContext]:
         return _NoContext
 
-
 else:
     _copy_context = __copy_context  # type: ignore[assignment]
 

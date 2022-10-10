@@ -402,7 +402,7 @@ class HTTP1_0Tests(unittest.TestCase, ResponseTestMixin):
         self.assertFalse(transport.disconnected)
 
         # Move an absurdly long way just to prove the point.
-        clock.advance(2 ** 32)
+        clock.advance(2**32)
         self.assertTrue(transport.disconnecting)
         self.assertFalse(transport.disconnected)
 

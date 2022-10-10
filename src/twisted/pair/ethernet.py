@@ -42,7 +42,7 @@ class EthernetProtocol(protocol.AbstractDatagramProtocol):
         proto = raw.IRawPacketProtocol(proto)
         if num < 0:
             raise TypeError("Added protocol must be positive or zero")
-        if num >= 2 ** 16:
+        if num >= 2**16:
             raise TypeError("Added protocol must fit in 16 bits")
         if num not in self.etherProtos:
             self.etherProtos[num] = []

@@ -103,7 +103,7 @@ class ProducerConsumerProxy(BasicProducerConsumerProxy):
     """
 
     # Copies much from abstract.FileDescriptor
-    bufferSize = 2 ** 2 ** 2 ** 2
+    bufferSize = 2**2**2**2
 
     producerPaused = False
     unregistered = False

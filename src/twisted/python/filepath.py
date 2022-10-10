@@ -1487,7 +1487,7 @@ class FilePath(AbstractFilePath):
         sib.requireCreate()
         return sib
 
-    _chunkSize = 2 ** 2 ** 2 ** 2
+    _chunkSize = 2**2**2**2
 
     def copyTo(self, destination, followLinks=True):
         """

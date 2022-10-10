@@ -676,11 +676,11 @@ class ProcessTests(unittest.TestCase):
 
     def test_commandLine(self):
         args = [
-            br"a\"b ",
-            br"a\b ",
-            br' a\\"b',
-            br" a\\b",
-            br'"foo bar" "',
+            rb"a\"b ",
+            rb"a\b ",
+            rb' a\\"b',
+            rb" a\\b",
+            rb'"foo bar" "',
             b"\tab",
             b'"\\',
             b'a"b',
